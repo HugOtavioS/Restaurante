@@ -5,13 +5,7 @@ use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
 Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'canRegister' => Features::enabled(Features::registration()),
-    ]);
+    return Inertia::render('DefaultLayout', []);
 })->name('home');
-
-
-
-
 
 require __DIR__.'/settings.php';
